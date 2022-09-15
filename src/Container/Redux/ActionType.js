@@ -1,0 +1,23 @@
+export const EMAIL_VARIFICATION ="EMAIL_VARIFICATION"
+export const AUTH_LOGIN = "AUTH_LOGIN"
+export const LOGIN_FORM = "LOGIN_FORM"
+export const LOGED_FORM = "LOGED_FORM"
+export const LOGOUT_USER = "LOGOUT_USER"
+export const LOGGEDOUT_USER = "LOGGEDOUT_USER"
+export const GOOGLE_LOGIN  = "GOOGLE_LOGIN"
+export const FORGOT_PASSWORD = "FORGOT_PASSWORD"
+
+export const SET_ALERT = "SET_ALERT"
+export const RESET_ALERT = "RESET_ALERT"
+
+export const CAT_ADMIN = "CAT_ADMIN"
+export const POST_CAT_ADMIN = "POST_CAT_ADMIN"
+export const DELETE_ADMIN = "DELETE_ADMIN"
+export const UPDATE_ADMIN = "UPDATE_ADMIN"
+export const ERROR_ADMIN = "ERROR_ADMIN"
+
+export const PRODUCT_ADMIN = "PRODUCT_ADMIN"
+export const POST_PRODUCT_ADMIN = "POST_PRODUCT_ADMIN"
+export const DELETE_PRODUCT = "DELETE_PRODUCT"
+export const UPDATE_PRODUCT = "UPDATE_PRODUCT"
+export const ERROR_PRODUCT = "ERROR_PRODUCT"

@@ -946,7 +946,7 @@ header #logo img{
 /*  ORDER SECTION
 /*---------------------------------------------------------------------*/
 .order{
-    background: #f6f6f6 url(../images/background/order-bg-bottom.jpg)no-repeat center bottom;
+    background: #f6f6f6 url(../images/background/order-bg-bottom.jpg);
 }
 .order .search-icon{
     position:relative;
@@ -1557,7 +1557,7 @@ footer .powered .social li a:hover i{
 /* FEATURES SECTION
 /*---------------------------------------------------------------------*/
 .service{
-    background: #fff url(../images/background/left-bg.jpg)no-repeat scroll left bottom;
+    background: #fff url(../images/background/left-bg.jpg);
 }
 .service .box{
     margin-bottom:50px;
@@ -2147,9 +2147,10 @@ footer .powered .social li a:hover i{
 /* SHOP
 /*---------------------------------------------------------------------*/
 .shop{
-    background: #fff url(../images/background/left-bg.jpg)no-repeat scroll left bottom;
+    background: #fff url(../images/background/left-bg.jpg);
     margin:50px 0 0 0;
 }
+
 .sort {
     margin-bottom:50px;
 }
@@ -4441,4 +4442,18 @@ footer .powered .social li a:hover i{
         margin-right: 5px;
     }
 
+}
+
+.login {
+    margin-top: 5% !important;
+    margin-bottom: 5% !important;
+}
+
+img.card-img-top {
+    width: 300px;
+    height: 300px;
+}
+
+h4.card-title.lh-base {
+    text-align: center;
 }

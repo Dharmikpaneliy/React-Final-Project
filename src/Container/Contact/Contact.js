@@ -17,6 +17,7 @@ function Contact(props) {
                 </div>
             </div>
             {/* Breadcrumb End */}
+            
             {/* Contact us Start */}
             <div className="contactus">
                 <div className="container">
@@ -38,19 +39,19 @@ function Contact(props) {
                                 <div className="form-group row">
                                     <div className="col-md-12 col-sm-12 col-xs-12">
                                         <i className="icofont icofont-ui-user" />
-                                        <input type="text" name="name" defaultValue id="input-name" className="form-control" placeholder="name" />
+                                        <input type="text" name="name" defaultValue id="input-name" className="form-control" placeholder="Name" value={" "}/>
                                     </div>
                                 </div>
                                 <div className="form-group row">
                                     <div className="col-md-12 col-sm-12 col-xs-12">
                                         <i className="icofont icofont-ui-message" />
-                                        <input type="text" name="email" defaultValue id="input-email" className="form-control" placeholder="email" />
+                                        <input type="text" name="email" defaultValue id="input-email" className="form-control" placeholder="Email" value={""}/>
                                     </div>
                                 </div>
                                 <div className="form-group row">
                                     <div className="col-md-12 col-sm-12 col-xs-12">
                                         <i className="icofont icofont-phone" />
-                                        <input type="text" name="phone" defaultValue id="input-phone" className="form-control" placeholder="mobile number" />
+                                        <input type="text" name="phone" defaultValue id="input-phone" className="form-control" placeholder="Mobile number" value={""}/>
                                     </div>
                                 </div>
                                 <div className="form-group row">

@@ -11,8 +11,8 @@ function Footer(props) {
                             <h5>Contact Us</h5>
                             <ul className="list-unstyled contact">
                                 <li><i className="icofont icofont-social-google-map" /> 20, floor, Restaurant Food &amp; Drinks, Nr, Queenslad Victoria Building, USA</li>
-                                <li><i className="icofont icofont-phone" /> 1800 000 0000,<br />+88 123 1234 1234</li>
-                                <li><a href="#"><i className="icofont icofont-ui-message" />info@yourdomainname.com</a></li>
+                                <li><i className="icofont icofont-phone" /> 1800 000 0000,<br />+91 94284 52708</li>
+                                <li><a href="#"><i className="icofont icofont-ui-message" />dharmikpaneliya7@gmail.com</a></li>
                             </ul>
                             {/* Footer Widget End */}
                         </div>

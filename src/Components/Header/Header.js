@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function Header(props) {
     return (
@@ -14,12 +14,13 @@ function Header(props) {
                             </ul>
                             {/* Header Social Start */}
                             <ul className="list-inline float-right icon">
-                                <li className="list-inline-item"><a href="shopping-cart.html"><i className="icofont icofont-cart-alt" /> Cart</a></li>
+                                {/* <li className="list-inline-item"><a href="shopping-cart.html"><i className="icofont icofont-cart-alt" /> Cart</a></li> */}
+                                <li className="list-inline-item"><NavLink to={"cart"}><i className="icofont icofont-cart-alt" /> Cart</NavLink></li>
                                 <li className="list-inline-item dropdown">
                                     <a className="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="icofont icofont-ui-user" /> My Account</a>
                                     <ul className="dropdown-menu dropdown-menu-right drophover" aria-labelledby="dropdownMenuLink">
-                                        <li className="dropdown-item"><a href="login.html">Login</a></li>
-                                        <li className="dropdown-item"><a href="register.html">Register</a></li>
+                                        <li className="dropdown-item"><Link to={"/login"}>Login</Link></li>
+                                        <li className="dropdown-item"><a>Register</a></li>
                                     </ul>
                                 </li>
                                 <li className="list-inline-item">
@@ -72,6 +73,12 @@ function Header(props) {
 
                                         {/* <li className="nav-item"><a href="contact-us.html">contact us</a></li> */}
                                         <li className="nav-item"><NavLink to={"/contact"}>Contact Us</NavLink></li>
+            
+                                        <li className="nav-item"><NavLink to={"/category"}>Category</NavLink></li>
+
+                                        {/* <li className="nav-item"><NavLink to={"/cat_admin"}>Catgories</NavLink></li> */}
+
+                                        {/* <li className="nav-item"><NavLink to={"/pr_admin"}>Products</NavLink></li> */}
                                     </ul>
                                 </div>
                             </nav>

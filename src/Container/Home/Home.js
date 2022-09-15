@@ -12,11 +12,7 @@ function Home(props) {
                         <div className="container">
                             <img src="assets/images/logo/logo-icon.png" alt="logo1" title="logo1" className="img-responsive" />
                             <div className="cd-headline clip">
-                                <h4>LOVES <span className="cd-words-wrapper">
-                                    <b className="is-visible">HEALTHY</b>
-                                    <b>QUALITY</b>
-                                    <b>TESTY</b>
-                                </span>FOOD</h4>
+                                <h4>LOVES HELTHY FOOD</h4>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur placerat nulla, in suscipit erat sodales id. Nullam ultricies eu turpis at accumsan. Mauris a sodales mi, eget lobortis nulla.</p>
                             <a className="btn-primary btn btn-wide" href="#">Today's menu</a>
@@ -45,7 +41,7 @@ function Home(props) {
                                 <form className="form-horizontal search-icon" method="post">
                                     <fieldset>
                                         <div className="form-group">
-                                            <input name="s" defaultValue placeholder="Search keyword" className="form-control" type="text" />
+                                            <input name="s" defaultValue placeholder="Search keyword" className="form-control" type="text" value={""}/>
                                         </div>
                                         <button type="submit" value="submit" className="btn btn-theme"><i className="icofont icofont-search" />Search</button>
                                     </fieldset>
