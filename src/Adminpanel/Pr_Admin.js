@@ -14,9 +14,10 @@ import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { useDispatch, useSelector } from 'react-redux';
-import { deletedata, deletedatapr, getdata, getdatapr, postdata, postdatapr, updatecart, updatecartpr } from '../Container/Redux/Action/Pr_admin.action';
+import { deletedata, deletedatapr, getdatapr, postdata, postdatapr, updatecart, updatecartpr } from '../Container/Redux/Action/Pr_admin.action';
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 import Category from '../Components/Category/Category';
+import { getdata } from '../Container/Redux/Action/Cat_admin.action';
 
 
 function Pr_Admin(props) {
@@ -161,7 +162,7 @@ function Pr_Admin(props) {
 
     useEffect(
         () => {
-            dispatch(getdatapr());
+            dispatch(getdata());
             loadData();
         },
         [])
@@ -234,32 +235,18 @@ function Pr_Admin(props) {
                                         helperText={formik.errors.price}
                                         error={formik.errors.price ? true : false}
                                     />
-                                    {/* <TextField
-                                        margin="dense"
-                                        id="category"
-                                        label="category"
-                                        fullWidth
-                                        variant="standard"
-                                        onChange={formik.handleChange}
-                                        defaultValue={formik.values.category}
-                                        helperText={formik.errors.category}
-                                        error={formik.errors.category ? true : false}
-
-                                    /> */}
                                     <FormControl fullWidth>
                                         <InputLabel id="demo-simple-select-label">Category</InputLabel>
                                         <Select
                                             labelId="demo-simple-select-label"
-                                            id="demo-simple-select"
-                                            value={Category}
+                                            id="demo-simple-select"      
                                             label="category"
+                                            name='category'
                                             onChange={formik.handleChange}
                                             defaultValue={formik.values.category}
-                                            helperText={formik.errors.category}
-                                            error={formik.errors.category ? true : false}
                                         >
                                             {
-                                                catdata.map((c)=>(
+                                                catdata.map((c) => (
                                                     <MenuItem value={c.name}>{c.name}</MenuItem>
                                                 ))
                                             }

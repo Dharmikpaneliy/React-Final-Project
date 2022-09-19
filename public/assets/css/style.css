@@ -4457,3 +4457,35 @@ img.card-img-top {
 h4.card-title.lh-base {
     text-align: center;
 }
+
+.category {
+    text-align: center;
+    justify-content: center;
+}
+
+.margin-20{
+ margin:10px 15px;
+}
+
+.border-radius{
+    border-radius: .25rem;
+}
+
+.border.border-radius {
+    padding: 10px;
+}
+
+.bg-secondary{
+    color: #fff !important;
+    background-color: rgba(0, 0, 0, 0.35) !important;
+}
+
+.bg-secondary:hover{
+    color: #fff !important;
+    background-color: #fd7e14 !important;
+}
+
+.product-all-d img {
+    width: 150px !important;
+    height: 150px !important;
+}
