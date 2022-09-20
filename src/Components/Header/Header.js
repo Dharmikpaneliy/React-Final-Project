@@ -76,6 +76,8 @@ function Header(props) {
             
                                         <li className="nav-item"><NavLink to={"/category"}>Category</NavLink></li>
 
+                                        {/* <li className="nav-item"><NavLink to={"/Productdetails"}>Productdetails</NavLink></li> */}
+
                                         {/* <li className="nav-item"><NavLink to={"/cat_admin"}>Catgories</NavLink></li> */}
 
                                         {/* <li className="nav-item"><NavLink to={"/pr_admin"}>Products</NavLink></li> */}

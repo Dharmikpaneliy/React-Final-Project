@@ -39,7 +39,7 @@ function Contact(props) {
                                 <div className="form-group row">
                                     <div className="col-md-12 col-sm-12 col-xs-12">
                                         <i className="icofont icofont-ui-user" />
-                                        <input type="text" name="name" defaultValue id="input-name" className="form-control" placeholder="Name" value={" "}/>
+                                        <input type="text" name="name" defaultValue id="input-name" className="form-control" placeholder="Name" value={""}/>
                                     </div>
                                 </div>
                                 <div className="form-group row">

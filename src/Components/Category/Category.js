@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import { getdata } from '../../Container/Redux/Action/Cat_admin.action';
 import { getdatapr } from '../../Container/Redux/Action/Pr_admin.action';
 
 function Category(props) {
 
     // const [data, setData] = useState([])
-    const [Product, setProduct] = useState([])
+    const [Product, setProduct] = useState([]);
+    const [filterdata , setFilterdata] = useState([]);
     const admin = useSelector(state => state.cat)
     const Products = useSelector(state => state.Pr)
 
@@ -17,6 +18,7 @@ function Category(props) {
     const data = admin.cat;
 
     const dispatch = useDispatch();
+    const history = useHistory()
 
     useEffect(
         () => {
@@ -25,6 +27,30 @@ function Category(props) {
             // setData(admin.cat)
         }, []
     )
+
+    const handledetails = (d) => {
+        console.log(d);
+        history.push("/Productdetails", d)
+    }
+
+    const handlefilter = (l) => {
+       console.log(l);
+       let filterd = [];
+       if (l === "All") {
+           setFilterdata([]);
+       }
+
+    ProductData.map((p) => {
+        if (l === p.category) {
+            console.log(p);
+            filterd.push(p)
+        }
+    }) 
+    setFilterdata(filterd);
+
+
+    }
+    const finaldatapr = filterdata.length > 0 ? filterdata : ProductData;
 
     return (
         <>
@@ -44,17 +70,18 @@ function Category(props) {
             <div className='category'>
 
                 <div className='d-flex justify-content-center mt-3'>
-                    <a>
+                    <a onClick={(data)=> handlefilter("All")}>
                         <div className='border border-radius bg-secondary text-white margin-20'>All</div>
                     </a>
 
                     {
                         cattegorydata.map((l) => (
                             <>
-                                <div className='margin-20'>
-                                    {/* <div><img src={l.file} alt="image" height={60} /></div> */}
-                                    <div className='border border-radius bg-secondary text-white'>{l.name}</div>
-                                </div>
+                                <a onClick={(data)=> handlefilter(l.name)}>
+                                    <div className='margin-20'>
+                                        <div className='border border-radius bg-secondary text-white'>{l.name}</div>
+                                    </div>
+                                </a>
                             </>
                         ))
                     }
@@ -63,17 +90,17 @@ function Category(props) {
             </div>
 
             <div>
-                <div>
+                <div className='container'>
                     <div className='row mt-5'>
                         {
-                            ProductData.map((d) => (
+                            finaldatapr.map((d) => (
                                 <>
                                     <div className='col-lg-3'>
-                                        <div className='text-center product-all-d mt-4'>
+                                        <div className='text-center product-all-d mt-4 mb-5'>
                                             <img src={d.file} alt="image" width={200} />
                                             <div>{d.name}</div>
                                             <div>{d.price}</div>
-                                            <button className='btn btn-dark text-center mb-5'>Read More</button>
+                                            <button className='btn btn-dark' onClick={() => handledetails(d)}>Read More</button>
                                         </div>
                                     </div>
                                 </>

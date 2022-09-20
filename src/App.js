@@ -16,6 +16,7 @@ import cart from './Container/Cart/cart';
 import Category from './Components/Category/Category';
 import Cat_admin from './Adminpanel/Cat_admin';
 import Pr_Admin from './Adminpanel/Pr_Admin';
+import Productdetails from './Adminpanel/Productdetails';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route exact path={"/category"} component={Category}/>
           <Route exact path={"/cat_admin"} component={Cat_admin}/>
           <Route exact path={"/pr_admin"} component={Pr_Admin} />
+          <Route exact path={"/Productdetails"} component={Productdetails} />
         </Switch>
         <Footer />
       </PersistGate>
