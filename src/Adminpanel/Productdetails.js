@@ -1,8 +1,18 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { addtocart } from '../Container/Redux/Action/Cart.action';
 
 function Productdetails(props) {
 
     const productval = [props.location.state]
+    const dispatch = useDispatch()
+    const history = useHistory()
+
+    const handlecart = (d) => {
+        dispatch(addtocart(d))
+        history.push("/cart")
+    }
 
     return (
         <div>
@@ -41,7 +51,7 @@ function Productdetails(props) {
                                                         <button href="#" className="border border-ra bg-dark text-white" >Buy Now</button>
                                                     </div>
                                                     <div className=''>
-                                                        <button href="#" className="border border-ra bg-dark text-white mx-3">Add To Cart</button>
+                                                        <button href="#" className="border border-ra bg-dark text-white mx-3" onClick={() => { handlecart(d) }}>Add To Cart</button>
                                                     </div>
                                                 </div>
                                             </div>

@@ -6,5 +6,6 @@ import { ProductReducer } from "./Pr_admin.reducer";
 export const rootReducer = combineReducers({
     auth : authReducer,
     cat : cartReducer,
-    Pr: ProductReducer
+    Pr: ProductReducer,
+    cart: cartReducer
 })
